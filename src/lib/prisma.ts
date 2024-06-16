@@ -1,6 +1,11 @@
 import { PrismaClient } from '@prisma/client'
+import type { Adapter } from 'next-auth/adapters'​;
+
+
 
 let prisma: PrismaClient;
+
+
 
 if(process.env.NODE_ENV === "production"){
   prisma = new PrismaClient();
